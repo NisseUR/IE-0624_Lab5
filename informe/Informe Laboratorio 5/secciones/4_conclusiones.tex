@@ -1,0 +1,15 @@
+% Conclusiones y recomendaciones
+
+\begin{itemize}
+    \item Se logró capturar la información proveniente del giroscopio en la placa del Arduino, la cual pasó por el puerto serial y se guardó a través de un script de Python en un archivo .csv.
+    \item  Se utilizó de forma exitosa un script de Python en Google Colab para cargar las muestras, configurar la red neuronal, entrenar la red y la exportación del modelo.h; modelo obtenido con TensorFlow Lite.
+    \item Se logró entrenar una red neuronal computacional con el 60 \% de los datos de las muestras, se utilizó el 20\% de los mismos para lo que fue la validación y 20\% restante para la realización de pruebas.
+    \item Se lograron coincidencias del casi 100\% en los movimientos detectados por el algoritmo que hizo uso del modelo de TensorFlow Lite exportado, es decir, todos los movimientos puestos a prueba con el modelo fueron acertados.
+    \item Tomar el Arduino Nano BLE Sense Lite siempre en la misma posición y siguiendo de ejemplo las imágenes en sección desarrollo, para obtener eficiencias de detección de movimiento cercanas al 100\%.
+     \item No utilizar Arduino IDE para subir el programa y el modelo que clasifica los movimientos, puesto que este desconecta el puerto serial y no permite que se suba el programa a la placa del Arduino.
+    \item La librería Arduino\_TensorFlowLite no funcionará en Windows si no mueve la carpeta tensor tensorflow dentro de la carpeta src dentro de la misma librería.
+    \item Utilizar arduino-cli para compilar y cargar el programa en caso de que el Arduino IDE esté dando problema de desconexión del puerto serial a la hora de subir el programa a la placa de Arduino.
+    \item Hacer uso de arduino-cli para evitar inconvencias a la hora de monitorear los datos del puerto serial en terminal, esto porque si Arduino IDE está haciendo uso del puerto, en terminal no se podrán observar los valores.
+\end{itemize}
+
+%% realizarse en función de lo descrito en la sección de análisis de datos
